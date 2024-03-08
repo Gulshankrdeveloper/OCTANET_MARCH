@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* section-1 */
+        .frontpage{
+            height: 120vh;
+            width: 100%;
+            background-image: url(./assets/background.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+        .content{
+            color: white;
+            padding: 0 200px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+        .navbar ul{
+            width: 30%;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+        .frontpage .navbar .button{
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            background-color: #1b86dd;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .frontpage .textcontent{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .textcontent .text{
+            display: flex;
+            flex-direction: column;
+            height: 30%;
+        }
+        .textcontent .text p,.button{
+            margin-bottom: 30px;
+        }
+        .textcontent .text .head{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .textcontent .text p{
+            font-size: 20px;
+        }
+        .textcontent .text .button .button1,.button2{
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: transparent;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .textcontent .text .button .button1{
+            background-color: #1b86dd;
+        }
+        .textcontent .text .button .button2{
+            border: 2px solid white;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 270px;
+            height: 500px;
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            color: black;
+        }
+        .form input,select{
+            padding: 10px;
+            background-color: #ebe6e6;
+            border: none;
+            color: black;
+        }
+        .textcontent .form .button{
+            padding: 10px;
+            background-color: #1b86dd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* section-2 */
+        .leading-med-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 500px;
+            background-color: aliceblue;
+        }
+        .leading-med-card .machine-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leading-med-card .card-section{
+            display: flex;
+        }
+        .leading-med-card .card-section .card{
+            height: 250px;
+            width: 250px;
+           margin-left: 20px;
+           border-radius: 10px;
+           border: 2px solid #1b86dd;
+           
+        }
+        .leading-med-card .card-section .head{
+            width: 100%;
+            height: 70px;
+            background-color: #1b86dd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .leading-med-card .card-section .contnt{
+            height: 170px;
+            display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           align-items: flex-start;
+           padding: 10px 25px;
+        }
+        .card-section .contnt a{
+            text-decoration: none;
+            font-weight: bold;
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* section-3 */
+        .leading-med-rating{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+            background-color: #c0bebe;
+        }
+        .leading-med-rating .rate-card{
+            width: 250px;
+            height: 200px;
+            margin-left: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .leading-med-rating .machine{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leading-med-rating .rating{
+            display: flex;
+        }
+        .leading-med-rating .rating .rate-card{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .rating .rate-card img{
+            border-radius: 30%;
+        }
+
+        /* section-4 */
+        .faqsection{
+            width: 100%;
+            height: 100vh;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .faqsection .faq{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .faqsection .grid{
+            display: flex;
+        }
+        .faqsection .grid .row1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px;
+            width: 300px;
+            margin-left: 20px;
+        }
+        .faqsection .grid .row1 .item span{
+            font-size: 30px;
+            color: blue;
+        }
+
+        /* section-5 */
+        .pricing-section{
+            width: 100%;
+            height: 130vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .pricing-section .pricing{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pricing-section .price{
+            display: flex;
+        }
+        .pricing-section .price .card{
+            width: 250px;
+            height: 500px;
+            margin-left: 20px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .pricing-section .price .card i{
+          font-size: 25px;
+        }
+        .pricing-section .price .card .gb{
+            padding-right: 40px;
+        }
+        .pricing-section .price .card2{
+            color: white;
+            width: 250px;
+            height: 500px;
+            margin-left: 20px;
+            border: 1px solid blue;
+            background-color: #141313;
+            transform: scale(1.15);
+            border-radius: 5px;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .pricing-section .price .card .para{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pricing-section .price .card .button{
+            width: 70%;
+            padding: 10px;
+            background-color: #1b86dd;
+            border: none;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* section-6 */
+        .getin{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+            padding: 0 100px;
+            background-color: black;
+            color: white;
+        }
+        .getin .right input{
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .getin .right .button{
+            padding: 10px;
+            background-color: #1b86dd;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* section-7 */
+        .lastpage{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .lastpage .list{
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .lastpage .list a{
+            text-decoration: none;
+            color: gray;
+            font-weight: bold;
+        }
+        .lastpage .list i{
+            margin-left: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .footer{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c0bebe;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="frontpage">
+            <div class="content">
+                <div class="navbar">
+                    <h3>BrandName</h3>
+                    <ul>
+                        <li>Home</li>
+                        <li>Product</li>
+                        <li>Pricing</li>
+                        <li>Contact</li>
+                    </ul>
+                    <button class="button">Get Quote Now <span>&#x2192;</span></button>
+                </div>
+                <div class="textcontent">
+                    <div class="text">
+                        <p class="head">Meet the Best <br>Hospital</p>
+                        <p>We know how large objects will act, <br>but things on a small scale.</p>
+                        <div class="button">
+                            <button class="button1">Get Quote Now</button>
+                            <button class="button2">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <h2>Book Appointment</h2>
+                        <label for="">Name*</label>
+                        <input type="text" name="" id="" placeholder="Full Name">
+                        <label for="">Email address*</label>
+                        <input type="email" placeholder="example@gmmail.com">
+                        <label for="">Department*</label>
+                        <select name="" id="">
+                            <option value="">Please select</option>
+                        </select>
+                        <label for="">Time</label>
+                        <select name="" id="">
+                            <option value="">4:00 Available</option>
+                        </select>
+                        <button class="button">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="leading-med-card">
+            <div class="machine-section">
+                <h2>Leading Medicine</h2>
+                <p>Problems trying to resolve the conflict between</p>
+                <p>the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="card-section">
+                <div class="card">
+                    <div class="head">
+                        <p>Emergency Case</p>
+                    </div>
+                    <div class="contnt">
+                          <p><span>&ndash;</span> The best products start <br>with Figma</p>
+                          <p> <span>&ndash;</span> Design with real data</p>
+                          <p><span>&ndash;</span> Lightning fast prototyping</p> 
+                          <p><span>&ndash;</span> Fastest way to organize</p> 
+                          <p><span>&ndash;</span> Work at the speed of thought.</p> 
+                          <a href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="head">
+                        <p>Cancer Care</p>
+                    </div>
+                    <div class="contnt">
+                          <p><span>&ndash;</span> The best products start <br>with Figma</p>
+                          <p> <span>&ndash;</span> Design with real data</p>
+                          <p><span>&ndash;</span> Lightning fast prototyping</p> 
+                          <p><span>&ndash;</span> Fastest way to organize</p> 
+                          <p><span>&ndash;</span> Work at the speed of thought.</p> 
+                          <a href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="head">
+                        <p>Health Queries</p>
+                    </div>
+                    <div class="contnt">
+                          <p><span>&ndash;</span> The best products start <br>with Figma</p>
+                          <p> <span>&ndash;</span> Design with real data</p>
+                          <p><span>&ndash;</span> Lightning fast prototyping</p> 
+                          <p><span>&ndash;</span> Fastest way to organize</p> 
+                          <p><span>&ndash;</span> Work at the speed of thought.</p> 
+                          <a href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="leading-med-rating">
+            <div class="machine">
+                <h2>Leading Medicine</h2>
+                <p>Problems trying to resolve the conflict between</p>
+                <p>the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="rating">
+                <div class="rate-card">
+                    <div class="star">
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-regular fa-star" style="color: #ebe300;"></i>
+                    </div>
+                    <p>State helps you see how many <br>more days you need to work to <br>reach your financial goal.</p>
+                    <img src="./assets/attractive-young-male-nutriologist-lab-coat-smiling-against-white-background_662251-2960.jpg" alt="" width="100px" height="50px">
+
+                </div>
+                <div class="rate-card">
+                    <div class="star">
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-regular fa-star" style="color: #ebe300;"></i>
+                    </div>
+                    <p>State helps you see how many <br>more days you need to work to <br>reach your financial goal.</p>
+                    <img src="./assets/female-doctor-using-her-digital-tablet-free-vector.jpg" alt="" width="100px" height="50px">
+                </div>
+                <div class="rate-card">
+                    <div class="star">
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-solid fa-star" style="color: #ebe300;"></i>
+                    <i class="fa-regular fa-star" style="color: #ebe300;"></i>
+                    </div>
+                    <p>State helps you see how many <br>more days you need to work to <br>reach your financial goal.</p>
+                    <img src="./assets/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg" alt="" width="100px" height="50px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="faqsection">
+            <div class="faq">
+                <h2>FAQ</h2>
+                <p>Problems trying to resolve the conflict between</p>
+                <p>the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="grid">
+                <div class="row1">
+                    <div class="item">
+                        <h3><span>&rsaquo;</span> the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like nothing</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like nothing</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like nothing</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave like</p>
+                    </div>
+                    <div class="item">
+                        <h3><span>&rsaquo;</span>the quick fox jumps over the <br>lazy dog</h3>
+                        <p>Things on a very small scale <br>behave</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="pricing-section">
+            <div class="pricing">
+                <h2>Pricing</h2>
+                <p>Problems trying to resolve the conflict between</p>
+                <p>the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="price">
+                <div class="card">
+                    <h2>FREE</h2>
+                    <div class="para"><P>Organize across all</P>
+                    <p>apps by hand</p></div>
+                    <p>0 <sup>$</sup>per Month</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i> Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#808080;"></i>1GB Cloud storage</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#808080;"></i>Email ad community <br>support</p>
+                    <button class="button">Try for free</button>
+                </div>
+                <div class="card card2">
+                    <h2>STANDARD</h2>
+                    <div class="para"><P>Organize across all</P>
+                    <p>apps by hand</p></div>
+                    <p>9.99<sup>$</sup>per Month</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>1GB Cloud storage</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Email ad community <br>support</p>
+                    <button class="button">Try for free</button>
+                </div>
+                <div class="card">
+                    <h2>PREMIUM</h2>
+                    <div class="para"><P>Organize across all</P>
+                    <p>apps by hand</p></div>
+                    <p>19.99<sup>$</sup>per Month</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Unlimited product updates</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>1GB Cloud storage</p>
+                    <p class="gb"><i class="fa-solid fa-circle-check" style="color:#00ff00;"></i>Email ad community <br>support</p>
+                    <button class="button">Try for free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="getin">
+            <div class="text">
+                <h2>Get In Touch</h2>
+                <p>The gradual accumulation of information about atomic and <br>small-scale behaviour during the first quarter of the 20th</p>
+            </div>
+            <div class="right">
+                <input type="email" placeholder="Your Email"><button class="button">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="lastpage">
+            <div class="list">
+                <h3>Get In Touch</h3>
+                <p>the quick fox jumps over the <br>lazy dog</p>
+                <div class="i">
+                    <i class="fa-brands fa-facebook" style="color: #105ada;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #266fed;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #357df8;"></i>
+                </div>
+            </div>
+            <div class="list">
+                <h3>Company info</h3>
+                <a href="">About Us</a>
+                <a href="">Carrier</a>
+                <a href="">We are hiring</a>
+                <a href="">Blog</a>
+            </div>
+            <div class="list">
+                <h3>Features</h3>
+                <a href="">Business Marketing</a>
+                <a href="">User Analytic</a>
+                <a href="">Live Chat</a>
+                <a href="">Unlimited Support</a>
+            </div>
+            <div class="list">
+                <h3>Resources</h3>
+                <a href="">IOS & Android</a>
+                <a href="">Watch a Demo</a>
+                <a href="">Customers</a>
+                <a href="">API</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Made with Love By Figmaland All Right Reserved</p>
+        </div>
+    </section>
+</body>
+</html>
